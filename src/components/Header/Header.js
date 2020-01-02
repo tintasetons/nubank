@@ -1,9 +1,21 @@
 import React from 'react';
 
-import '~/config/ReactotronConfig';
+import {
+  Container, Top, Logo, Title,
+} from './styles-header';
 
-import {View} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-export default function Main() {
-  return <View />;
+import logo from '~/assets/Nubank_Logo.png';
+
+export default function Header() {
+  return (
+    <Container>
+      <Top>
+        <Logo source={logo} />
+        <Title>Walter</Title>
+      </Top>
+      <Icon name="keyboard-arrow-down" size={20} color="#FFF" />
+    </Container>
+  );
 }
